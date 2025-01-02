@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+input {
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+    border: 1px solid var(--color-neon-blue);
+    background-color: rgba(24, 242, 242, 0.05);
+    color: var(--color-text);
+    width: 300px;
+    font-family: var(--font-mono);
+    box-shadow: var(--glow-blue);
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--color-neon-pink);
+    box-shadow: var(--glow-pink);
+  }
+  
+  button {
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+    font-family: var(--font-display);
+    background-color: transparent;
+    color: var(--color-neon-pink);
+    border: 1px solid var(--color-neon-pink);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: var(--glow-pink);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 46, 108, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+  }
+  
+  button:hover::before {
+    left: 100%;
+  }
+  
+  button:hover {
+    background-color: rgba(255, 46, 108, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .back-button {
+    border-color: var(--color-neon-blue);
+    color: var(--color-neon-blue);
+    box-shadow: var(--glow-blue);
+  }
+  
+  .back-button:hover {
+    background-color: rgba(24, 242, 242, 0.1);
+  }
+  
+  .user-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-neon-blue);
+    box-shadow: var(--glow-blue);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    backdrop-filter: blur(10px);
+  }
+  
+  .user-card::before {
+    content: '[USER_DATA]';
+    position: absolute;
+    top: -0.8em;
+    left: 1em;
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    color: var(--color-neon-blue);
+    background: var(--color-background);
+    padding: 0 0.5em;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--color-neon-pink);
+    box-shadow: var(--glow-pink);
+    position: relative;
+  }
+  
+  .avatar::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid var(--color-neon-pink);
+    animation: scan 2s linear infinite;
+  }
+  
+  @keyframes scan {
+    0% { clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+    100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  }
+  
+  .user-names h2 {
+    font-family: var(--font-display);
+    color: var(--color-neon-yellow);
+    font-size: 2em;
+    margin: 0 0 0.5rem 0;
+    text-shadow: 0 0 5px var(--color-neon-yellow);
+  }
+  
+  .user-names a {
+    color: var(--color-neon-blue);
+    text-decoration: none;
+    font-family: var(--font-mono);
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--color-neon-pink);
+    border-bottom: 1px solid var(--color-neon-pink);
+    position: relative;
+  }
+  
+  .stat-item .value {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--color-neon-pink);
+    text-shadow: var(--glow-pink);
+  }
+  
+  .stat-item .label {
+    font-family: var(--font-mono);
+    color: var(--color-text-secondary);
+  }
+  
+  .repos-list {
+    margin-top: 2rem;
+  }
+  
+  .repo-item {
+    background: rgba(24, 242, 242, 0.05);
+    border: 1px solid var(--color-neon-blue);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .repo-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--glow-blue);
+  }
+  
+  .repo-item h3 a {
+    color: var(--color-neon-yellow);
+    text-decoration: none;
+    font-family: var(--font-display);
+  }
+  
+  .repo-stats {
+    font-family: var(--font-mono);
+    color: var(--color-text-secondary);
+  }
+  
+  .loading {
+    color: var(--color-neon-blue);
+    font-family: var(--font-mono);
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .loading::after {
+    content: '_';
+    animation: blink 1s infinite;
+  }
+  
+  .error {
+    background: rgba(255, 46, 108, 0.1);
+    color: var(--color-neon-pink);
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--color-neon-pink);
+    box-shadow: var(--glow-pink);
+    font-family: var(--font-mono);
+  }

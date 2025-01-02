@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --color-background: #0a0a16;
+  --color-surface: #1a1a2e;
+  --color-neon-pink: #ff2e6c;
+  --color-neon-blue: #18f2f2;
+  --color-neon-yellow: #f2e318;
+  --color-text: #ffffff;
+  --color-text-secondary: #8a8a8a;
+  
+  --font-display: 'Orbitron', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+  
+  background-color: var(--color-background);
+  color: var(--color-text);
+  
+  --glow-pink: 0 0 10px var(--color-neon-pink);
+  --glow-blue: 0 0 10px var(--color-neon-blue);
+}
