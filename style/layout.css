@@ -2,18 +2,25 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    min-width: 320px;
     min-height: 100vh;
-
+    color: var(--color-neon-blue);
+    font-family: var(--font-mono);
+    text-align: center;
     background-size: 20px 20px;
     background-color: #0d0d1a;
+    overflow-x: hidden;
+
   }
   
+  body .container{
+    min-width: 200px;
+    max-width: 600px;
+  }
+
   .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
   
   .container::before {
@@ -31,23 +38,22 @@ body {
   }
   
   .search-box {
+    padding: 2rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
     margin-bottom: 2rem;
     position: relative;
   }
-  
-  .search-box::after {
-    content: '>';
-    font-family: var(--font-mono);
-    color: var(--color-neon-blue);
-    position: absolute;
-    left: -2rem;
-    animation: blink 1s infinite;
-    font-size: 3rem;
+  .search-box input{
+    min-width: 200px;
+    display: flex;
+    flex: 1;
   }
-  
-  @keyframes blink {
-    50% { opacity: 0; }
+
+  #result{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
   }

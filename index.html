@@ -7,7 +7,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <div class="container">
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter GitHub username"
+          autocomplete="off"
+        />
+        <button id="searchButton">Search</button>
+      </div>
+      <div id="result">
+        <div id="profile"></div>
+        <div id="content"></div>
+      </div>
+    </div>
     <script type="module" src="main.js"></script>
   </body>
 </html>
